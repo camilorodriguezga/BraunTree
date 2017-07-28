@@ -1,0 +1,33 @@
+open import Data.stlib.bt-bool
+
+module Data.braun-tree-simple where
+
+open import Data.stlib.bt-bool-thms
+open import Data.stlib.bt-eq
+open import Data.stlib.bt-nat
+open import Data.stlib.bt-nat-thms
+open import Data.stlib.bt-product
+open import Data.stlib.bt-sum
+
+data T : Set where
+
+-- the index n is the size of the tree (number of elements of type A)
+data BraunTree : (n : ℕ) → Set where
+  bt-empty : BraunTree 0
+  bt-node : ∀ {n m : ℕ} → 
+            T → BraunTree n → BraunTree m → 
+            n ≡ m ∨ n ≡ suc m → 
+            BraunTree (suc (n + m))
+
+
+{- we will keep smaller (_<A_) elements closer to the root of the Braun tree as we insert -}
+btInsert : ∀ {n : ℕ} → T → BraunTree n → BraunTree (suc n)
+
+btInsert a bt-empty = bt-node a bt-empty bt-empty (inj₁ refl)
+
+btInsert a (bt-node{n}{m} a' l r p) 
+  rewrite +comm n m with p | if a < a' then (a , a') else (a' , a)
+btInsert a (bt-node{n}{m} a' l r _) | inj₁ p | (a1 , a2) 
+  rewrite p = (bt-node a1 (btInsert a2 r) l (inj₂ refl))
+btInsert a (bt-node{n}{m} a' l r _) | inj₂ p | (a1 , a2) = 
+  (bt-node a1 (btInsert a2 r) l (inj₁ (sym p)))
