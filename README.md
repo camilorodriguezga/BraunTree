@@ -8,11 +8,11 @@ braunTree is a Agda program intend to provide an alternative to understand the d
 
 To further understand the demonstration made to the Braun tree data structure. Some examples of the creation of Braun tree.
 
-``
-[Simple Test](https://github.com/camilorodriguezga/braunTree/blob/master/agda-braun-tree/src/test/bt-example-test-simple.agda~) 
+```
+	[Simple Test](https://github.com/camilorodriguezga/braunTree/blob/master/agda-braun-tree/src/test/bt-example-test-simple.agda~) 
 
-[Test](https://github.com/camilorodriguezga/braunTree/blob/master/agda-braun-tree/src/test/bt-example-test.agda)
-``
+	[Test](https://github.com/camilorodriguezga/braunTree/blob/master/agda-braun-tree/src/test/bt-example-test.agda)
+```
 
 ### References
 
