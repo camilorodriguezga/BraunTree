@@ -14,4 +14,4 @@ To further understand the demonstration made to the Braun tree data structure. S
 
 ### References
 
-Atmp, Aaron (2000). Verified Functional Programming in Agda. Aug. 2015 (Chap. 5).
+Stump, Aaron (2000). Verified Functional Programming in Agda. Aug. 2015 (Chap. 5).
