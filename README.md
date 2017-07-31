@@ -1,4 +1,4 @@
-# braunTree
+# BraunTree
 
 Camilo A. Rodríguez Garzón
 
