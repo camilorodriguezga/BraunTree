@@ -1,8 +1,8 @@
 # BraunTree
 
-Camilo A. Rodríguez Garzón
+Camilo Andrés Rodríguez Garzón
 
-braunTree is a Agda program intend to provide an alternative to understand the data structuredatos Braun tree.
+braunTree is a Agda program intend to provide an alternative to understand the data structure Braun tree.
 
 ### Examples
 
